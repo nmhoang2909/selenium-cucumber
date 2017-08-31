@@ -4,10 +4,14 @@ import base.DriverFactory;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
+
+import java.io.File;
+import java.io.IOException;
 
 
 public class Hooks {
@@ -40,11 +44,14 @@ public class Hooks {
     }
 
     @After
-    public void afterScenario(Scenario scenario) {
+    public void afterScenario(Scenario scenario) throws IOException {
         if (scenario.isFailed()) {
             try {
-                byte[] screenShot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-                scenario.embed(screenShot, "img/png");
+                File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+//                byte[] data = FileUtils.readFileToByteArray(scrFile);
+//                scenario.embed(data, "image/png");
+                final byte[] screenShot = FileUtils.readFileToByteArray(scrFile);
+                scenario.embed(screenShot, "image/png");
             } catch (WebDriverException ex) {
                 ex.printStackTrace();
             }

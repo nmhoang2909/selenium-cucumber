@@ -7,7 +7,7 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 3056210455,
+  "duration": 3282081037,
   "status": "passed"
 });
 formatter.scenario({
@@ -37,29 +37,29 @@ formatter.match({
   "location": "BasicStep.userOpenTheBrowser()"
 });
 formatter.result({
-  "duration": 305004959,
+  "duration": 458174816,
   "status": "passed"
 });
 formatter.match({
   "location": "BasicStep.userNavigateToGoogleSearchPage()"
 });
 formatter.result({
-  "duration": 2413022198,
+  "duration": 2190379699,
   "status": "passed"
 });
 formatter.match({
   "location": "BasicStep.verifyThatUserIsOnCorrectGoogleSearchPage()"
 });
 formatter.result({
-  "duration": 14702530,
+  "duration": 21510231,
   "status": "passed"
 });
 formatter.after({
-  "duration": 150391835,
+  "duration": 146006140,
   "status": "passed"
 });
 formatter.before({
-  "duration": 1193908881,
+  "duration": 1457885589,
   "status": "passed"
 });
 formatter.scenario({
@@ -89,26 +89,26 @@ formatter.match({
   "location": "BasicStep.userOpenTheBrowser()"
 });
 formatter.result({
-  "duration": 55667,
+  "duration": 54630,
   "status": "passed"
 });
 formatter.match({
   "location": "BasicStep.userNavigateToGmailPage()"
 });
 formatter.result({
-  "duration": 2314128003,
+  "duration": 2696423662,
   "status": "passed"
 });
 formatter.match({
   "location": "BasicStep.verifyThatUserIsOnCorrectGoogleSearchPage()"
 });
 formatter.result({
-  "duration": 14077265,
+  "duration": 26838167,
   "error_message": "org.junit.ComparisonFailure: expected:\u003cG[oogle]\u003e but was:\u003cG[mail]\u003e\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat steps.BasicStep.verifyThatUserIsOnCorrectGoogleSearchPage(BasicStep.java:31)\n\tat ✽.Then Verify that User is on correct Google Search page(features/Basic.feature:12)\n",
   "status": "failed"
 });
 formatter.after({
-  "duration": 860276082,
+  "duration": 1213157968,
   "status": "passed"
 });
 });
