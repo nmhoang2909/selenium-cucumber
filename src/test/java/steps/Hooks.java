@@ -47,10 +47,10 @@ public class Hooks {
     public void afterScenario(Scenario scenario) throws IOException {
         if (scenario.isFailed()) {
             try {
-                File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+//                File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 //                byte[] data = FileUtils.readFileToByteArray(scrFile);
 //                scenario.embed(data, "image/png");
-                final byte[] screenShot = FileUtils.readFileToByteArray(scrFile);
+                final byte[] screenShot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
                 scenario.embed(screenShot, "image/png");
             } catch (WebDriverException ex) {
                 ex.printStackTrace();
