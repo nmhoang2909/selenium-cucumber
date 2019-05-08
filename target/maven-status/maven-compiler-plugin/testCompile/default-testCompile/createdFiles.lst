@@ -1,4 +1,9 @@
-steps/BasicStep.class
-steps/Hooks.class
-steps/Hooks$BROWSERS.class
-runner/BasicTest.class
+steps\GoogleStep.class
+utils\DriverFactory$1.class
+utils\DriverFactory.class
+bases\MasterStep.class
+runner\AllTest.class
+pages\GooglePage.class
+bases\Hooks.class
+bases\MasterPage.class
+enums\Browsers.class

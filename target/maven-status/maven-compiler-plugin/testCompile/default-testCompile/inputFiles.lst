@@ -1,3 +1,8 @@
-/Users/Hoang/Documents/GitHub/selenium_cucumber/src/test/java/steps/BasicStep.java
-/Users/Hoang/Documents/GitHub/selenium_cucumber/src/test/java/steps/Hooks.java
-/Users/Hoang/Documents/GitHub/selenium_cucumber/src/test/java/runner/BasicTest.java
+D:\projects\github\selenium-cucumber\src\test\java\bases\MasterPage.java
+D:\projects\github\selenium-cucumber\src\test\java\runner\AllTest.java
+D:\projects\github\selenium-cucumber\src\test\java\utils\DriverFactory.java
+D:\projects\github\selenium-cucumber\src\test\java\bases\MasterStep.java
+D:\projects\github\selenium-cucumber\src\test\java\pages\GooglePage.java
+D:\projects\github\selenium-cucumber\src\test\java\bases\Hooks.java
+D:\projects\github\selenium-cucumber\src\test\java\enums\Browsers.java
+D:\projects\github\selenium-cucumber\src\test\java\steps\GoogleStep.java
