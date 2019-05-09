@@ -12,8 +12,7 @@ public class GoogleStep extends MasterStep {
     private GooglePage googlePage = GooglePage.using(getDriver());
 
     @Given("^User open the Browser$")
-    public void userOpenTheBrowser() throws Throwable {
-        // empty
+    public void userOpenTheBrowser() {
     }
 
     @When("^User navigate to \"([^\"]*)\" page$")
@@ -22,7 +21,7 @@ public class GoogleStep extends MasterStep {
     }
 
     @Then("^Verify that User is on correct Google Search page$")
-    public void verifyThatUserIsOnCorrectGoogleSearchPage() throws Throwable {
+    public void verifyThatUserIsOnCorrectGoogleSearchPage() {
         Assert.assertEquals("Google", googlePage.getTitlePage());
     }
 }

@@ -1,30 +1,30 @@
-package bases;
+package steps;
 
+import bases.MasterDriver;
 import utils.DriverFactory;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
-import enums.Browsers;
+import enums.DriverType;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 
-import java.io.IOException;
-
 public class Hooks {
     public static WebDriver driver;
+    private MasterDriver masterDriver;
 
     @Before
     public void beforeScenario() {
-        Browsers browser = Browsers.CHROME;
-        driver = new DriverFactory(browser).getDriver();
+        masterDriver = DriverFactory.getMasterDriver(DriverType.CHROME);
+        driver = masterDriver.getDriver();
         driver.manage().deleteAllCookies();
         driver.manage().window().maximize();
     }
 
     @After
-    public void afterScenario(Scenario scenario) throws IOException {
+    public void afterScenario(Scenario scenario) {
         if (scenario.isFailed()) {
             try {
                 final byte[] screenShot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
@@ -33,6 +33,6 @@ public class Hooks {
                 ex.printStackTrace();
             }
         }
-        driver.quit();
+        masterDriver.quitDriver();
     }
 }
